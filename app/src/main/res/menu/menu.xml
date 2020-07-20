@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="@string/settings"
+        android:id="@+id/settings"
+        android:icon="@drawable/ic_baseline_settings_24"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_search"
+        android:title="@string/search_by_location"
+        android:icon="@android:drawable/ic_menu_search"
+        android:inputType="textAutoComplete"
+        app:showAsAction="always"
+        app:actionViewClass="android.widget.SearchView" />
+
+    <item
+        android:title="@string/profile"
+        android:id="@+id/profile"/>
+    <item
+        android:title="@string/log_out"
+        android:id="@+id/logout"/>
+
+</menu>

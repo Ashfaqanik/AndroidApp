@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="4dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardElevation="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/d_card"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:cardCornerRadius="10dp">
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:elevation="10dp"
+                    android:alpha="0.8"
+                    android:gravity="start"
+                    android:layout_marginStart="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/userName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/app_name"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/userCity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/userName"
+                        android:paddingTop="4dp"
+                        android:text="@string/app_name"
+                        android:textSize="20sp"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/bloodGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/userCity"
+                        android:text="@string/app_name"
+                        android:textSize="20sp"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bloodGroup"
+                        android:text="@string/app_name"
+                        android:textSize="20sp"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/phone"
+                        android:text="@string/app_name"
+                        android:textSize="20sp"
+                        android:textStyle="italic" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:id="@+id/line"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:layout_below="@+id/d_card"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <ImageView
+                android:id="@+id/share_button"
+                android:layout_margin="8dp"
+                android:src="@drawable/ic_baseline_share_24"
+                android:layout_below="@+id/line"
+                android:layout_width="40dp"
+                android:layout_height="28dp"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/share" />
+            <ImageView
+                android:id="@+id/call_button"
+                android:layout_below="@+id/line"
+                android:src="@drawable/ic_baseline_add_ic_call_24"
+                android:layout_margin="8dp"
+                android:layout_width="40dp"
+                android:layout_height="28dp"
+                android:layout_toStartOf="@+id/share_button"
+                android:layout_marginStart="2dp"
+                android:contentDescription="@string/call" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

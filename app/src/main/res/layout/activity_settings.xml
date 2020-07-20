@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SettingsActivity"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/s_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/holo_red_light">
+    </androidx.appcompat.widget.Toolbar>
+    <ProgressBar
+        android:id="@+id/s_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateBehavior="cycle"
+        android:visibility="gone" />
+    <Button
+        android:id="@+id/s_password"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:background="@android:color/darker_gray"
+        android:text="@string/change_your_password"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textSize="18sp"/>
+    <Button
+        android:id="@+id/s_delete"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:background="@android:color/darker_gray"
+        android:text="@string/delete_account"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textSize="18sp"/>
+
+
+
+
+</LinearLayout>

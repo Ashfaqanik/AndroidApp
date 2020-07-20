@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_id"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+
+            android:padding="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".View.UpdateProfile">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/update_profile"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+            <TextView
+                android:id="@+id/msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_centerHorizontal="true"
+                android:text="@string/messge"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/editName"
+                android:layout_below="@id/msg"
+                android:inputType="text"
+                android:padding="20dp"
+                android:layout_width="match_parent"
+                android:hint="@string/edit_name"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/changeCity"
+                android:inputType="text"
+                android:padding="20dp"
+                android:layout_below="@id/editName"
+                android:layout_width="match_parent"
+                android:hint="@string/edit_city"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/changeBloodGrp"
+                android:inputType="text"
+                android:padding="20dp"
+                android:layout_below="@id/changeCity"
+                android:layout_width="match_parent"
+                android:hint="@string/edit_blood_group"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editPhone"
+                android:layout_below="@id/changeBloodGrp"
+                android:inputType="phone"
+                android:padding="20dp"
+                android:layout_width="match_parent"
+                android:hint="@string/edit_phone"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editEmail"
+                android:layout_below="@id/editPhone"
+                android:inputType="textEmailAddress"
+                android:padding="20dp"
+                android:layout_width="match_parent"
+                android:hint="@string/edit_email"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_below="@id/editEmail"
+                android:layout_marginEnd="5dp"
+                android:textSize="14sp"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:text="@string/update"
+                android:layout_width="match_parent"
+                android:textColor="@android:color/white"
+                android:background="@android:color/holo_red_dark"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

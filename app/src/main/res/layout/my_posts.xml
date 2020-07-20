@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@android:color/darker_gray"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardElevation="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="0dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:elevation="10dp"
+                    android:alpha="0.8"
+                    android:gravity="end"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/deleteButton"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="15dp"
+                        android:backgroundTint="@android:color/holo_red_light"
+                        android:background="@android:drawable/ic_menu_delete" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/cardProfileImage"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="true"
+                    android:scaleType="fitCenter"
+                    android:layout_marginTop="32dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="0dp"
+                    app:srcCompat="@drawable/placeholder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:contentDescription="@string/request_image" />
+
+                <com.borjabravo.readmoretextview.ReadMoreTextView
+                    android:id="@+id/requestProfile_text"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="232dp"
+                    android:text=""
+                    app:trimExpandedText="Show More"
+                    app:trimCollapsedText="Show Less"
+                    app:trimMode="trimModeLength"
+                    app:trimLength="15"
+                    app:colorClickableText="@android:color/darker_gray"
+                    android:textSize="18sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:id="@+id/line"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:layout_below="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <ImageView
+                android:id="@+id/share_button"
+                android:layout_below="@+id/line"
+                android:src="@drawable/ic_baseline_share_24"
+                android:layout_margin="8dp"
+                android:layout_alignParentEnd="true"
+                android:layout_width="40dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="2dp"
+                android:contentDescription="@string/share" />
+
+            <TextView
+                android:id="@+id/dateTextView"
+                android:layout_below="@id/line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:padding="5dp"
+                android:text="@string/date"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="italic" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

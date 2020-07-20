@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@android:color/holo_red_dark"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardElevation="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="0dp">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:elevation="10dp"
+                    android:alpha="0.8"
+                    android:gravity="end"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:id="@+id/request_row_city"
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:textStyle="bold"
+                        android:gravity="start"
+                        android:padding="3dp"
+                        android:text="@string/city"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/cardImage"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="true"
+                    android:scaleType="fitXY"
+                    android:layout_marginTop="32dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="0dp"
+                    app:srcCompat="@drawable/placeholder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:contentDescription="@string/request_image" />
+
+                <com.borjabravo.readmoretextview.ReadMoreTextView
+                    android:id="@+id/request_text"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textIsSelectable="true"
+                    android:layout_marginTop="232dp"
+                    android:text=""
+                    app:trimExpandedText="@string/show_less"
+                    app:trimCollapsedText="Show More"
+                    app:trimMode="trimModeLength"
+                    app:trimLength="15"
+                    app:colorClickableText="@android:color/darker_gray"
+                    android:textSize="18sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:id="@+id/line"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:layout_below="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <ImageView
+                android:id="@+id/share_button"
+                android:layout_margin="8dp"
+                android:src="@drawable/ic_baseline_share_24"
+                android:layout_below="@+id/line"
+                android:layout_width="40dp"
+                android:layout_height="28dp"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/share" />
+            <ImageView
+                android:id="@+id/call_button"
+                android:layout_below="@+id/line"
+                android:src="@drawable/ic_baseline_add_ic_call_24"
+                android:layout_margin="8dp"
+                android:layout_width="40dp"
+                android:layout_height="28dp"
+                android:layout_toStartOf="@+id/share_button"
+                android:layout_marginStart="2dp"
+                android:contentDescription="@string/call" />
+
+            <TextView
+                android:id="@+id/dateTextView"
+                android:layout_below="@id/line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:padding="5dp"
+                android:text="@string/date"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="italic" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

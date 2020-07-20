@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constrainedWidth="true"
+    android:background="@android:color/holo_red_dark"
+    tools:context=".Activities.SearchDonor">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/holo_red_light">
+        </androidx.appcompat.widget.Toolbar>
+        <ProgressBar
+            android:id="@+id/donor_progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateBehavior="cycle"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/d_city"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/linear"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/text_shp"
+        android:hint="@string/city"
+        android:textColorHint="@android:color/background_dark"
+        app:hintEnabled="true">
+
+        <Spinner
+            android:id="@+id/d_city_spinner"
+            android:layout_width="180dp"
+            android:layout_height="50dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/linear"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/d_city"
+        android:background="@drawable/text_shp"
+        android:hint="@string/blood_group"
+        android:textColorHint="@android:color/background_dark"
+        app:hintEnabled="true">
+
+        <Spinner
+            android:id="@+id/d_blood_spinner"
+            android:layout_width="180dp"
+            android:layout_height="50dp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/donor_recyclerview"
+        android:layout_width="match_parent"
+        android:background="@android:color/holo_red_light"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_below="@+id/d_city">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>
